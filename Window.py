@@ -32,14 +32,13 @@ class Window(Frame):
         self.photoEntry = Entry(self)
         self.photoEntry.grid(column=1, row=5, columnspan=2)
         # Creating info textbox
-        infoBox = Text(self, height=8, width=70, wrap=WORD)
+        infoBox = Text(self, height=7, width=70, wrap=WORD)
         infoBox.grid(column=1, row=0, pady=10)
         info = """\t\t\tINFO
 * możesz podać jedynie pliki w formacie *.txt
 * pamiętaj, aby długość szyfrogramu nie była dłuższa niż (wysokość zdjęcia * szerokość zdjęcia * 3) - 32
-* zdjęcie będące wynikiem zostanie zapisane w folderze z programem
-* ukrywanie informacji zaczyna się od lewego górnego rogu 
-* wartości RGB zdjęcia pierwotnego i przekształconego zostaną zapisane do pliku tekstowego """
+* zdjęcie będące wynikiem zostanie zapisane w folderze z programem z nazwą "zaszyfrowany.png"
+* ukrywanie informacji zaczyna się od lewego górnego rogu """
         infoBox.insert(END, info)
         self.readBox = Text(self, height=10, width=70, wrap=CHAR)
         self.readBox.grid(column=1, row=6, pady=10)
